@@ -374,14 +374,7 @@ class MyWatchFace : CanvasWatchFaceService() {
         }
 
         private fun drawBackground(canvas: Canvas) {
-
-            if (mAmbient && (mLowBitAmbient || mBurnInProtection)) {
-                canvas.drawColor(Color.BLACK)
-            } else if (mAmbient) {
-                canvas.drawBitmap(mGrayBackgroundBitmap, 0f, 0f, mBackgroundPaint)
-            } else {
-                canvas.drawBitmap(mBackgroundBitmap, 0f, 0f, mBackgroundPaint)
-            }
+            canvas.drawColor(Color.BLACK)
         }
 
         private fun drawWatchFace(canvas: Canvas) {
